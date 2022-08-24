@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.digitalhonors.processpension.model.PensionerDetail;
 
-@FeignClient(value="feignServiceUtil",url="${NETWORK_URI:http://localhost:8080/pension-management/pensioner}")
+@FeignClient(value="feignServiceUtil",url="${NETWORK_URI:load-balancer-572979795.us-east-1.elb.amazonaws.com/pension-management/pensioner}")
 public interface FeignServiceUtil {
 	
 	@GetMapping("/home")
